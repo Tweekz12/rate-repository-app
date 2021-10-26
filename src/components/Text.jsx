@@ -36,3 +36,5 @@ const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
 
     return <NativeText style={textStyles} {...props} />
 }
+
+export default Text;
