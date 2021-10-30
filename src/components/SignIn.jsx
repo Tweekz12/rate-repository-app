@@ -24,11 +24,11 @@ const validationSchema = yup.object().shape({
         .required('Password is required')
 });
 
-const SinginForm = ({ onSubmit }) => (
+export const SinginForm = ({ onSubmit }) => (
     <View>
-        <FormikTextInput name='username' placeholder='Username' style={{ padding: 10, borderColor: 'grey', borderWidth: 1, borderRadius: 5 }}/>
-        <FormikTextInput name='password' placeholder='Password' secureTextEntry style={{ padding: 10, borderColor: 'grey', borderWidth: 1, borderRadius: 5, marginTop: 15 }}/>
-        <Pressable onPress={onSubmit}>
+        <FormikTextInput testID='usernameField' name='username' placeholder='Username' style={{ padding: 10, borderColor: 'grey', borderWidth: 1, borderRadius: 5 }}/>
+        <FormikTextInput testID='passwordField' name='password' placeholder='Password' secureTextEntry style={{ padding: 10, borderColor: 'grey', borderWidth: 1, borderRadius: 5, marginTop: 15 }}/>
+        <Pressable testID='submitButton' onPress={onSubmit}>
             <Text style={{ color: 'white', backgroundColor: theme.colors.primary, padding: 15, borderRadius: 5, textAlign: 'center', marginTop: 15 }}>Sign in</Text>
         </Pressable>
     </View>

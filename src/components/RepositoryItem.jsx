@@ -36,32 +36,32 @@ const RepositoryItem = ({ item }) => {
                 <Image style={styles.tinyLogo} source={{ uri: item.ownerAvatarUrl }} />
                 <View style={styles.container2}>
                     <View>
-                        <Text fontWeight='bold' fontSize='subheading'>{item.fullName}</Text>
+                        <Text testID='name' fontWeight='bold' fontSize='subheading'>{item.fullName}</Text>
                     </View>
                     <View style={styles.row}>
-                        <Text style={{ marginEnd: 20 }}>{item.description}</Text>
+                        <Text testID='desc' style={{ marginEnd: 20 }}>{item.description}</Text>
                     </View>
                     <View style={styles.row}>
-                        <Text style={{ color: 'white', backgroundColor: theme.colors.primary, padding: 5, borderRadius: 5 }}>{item.language}</Text>
+                        <Text testID='lang' style={{ color: 'white', backgroundColor: theme.colors.primary, padding: 5, borderRadius: 5 }}>{item.language}</Text>
                     </View>
                 </View>
             </View>
 
             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
                 <View style={{ flexGrow: 1}}>
-                    <Text fontWeight='bold' style={{ textAlign: 'center'}}>{item.stargazersCount > 1000 ? `${(item.stargazersCount / 1000).toFixed(1)}k` : item.stargazersCount}</Text>
+                    <Text testID='starg' fontWeight='bold' style={{ textAlign: 'center'}}>{item.stargazersCount > 1000 ? `${(item.stargazersCount / 1000).toFixed(1)}k` : item.stargazersCount}</Text>
                     <Text style={{ textAlign: 'center', paddingTop: 5 }}>Stars</Text>
                 </View>
                 <View style={{ flexGrow: 1}}>
-                    <Text fontWeight='bold' style={{ textAlign: 'center'}}>{item.forksCount > 1000 ? `${(item.forksCount / 1000).toFixed(1)}k` : item.forksCount}</Text>
+                    <Text testID='forks' fontWeight='bold' style={{ textAlign: 'center'}}>{item.forksCount > 1000 ? `${(item.forksCount / 1000).toFixed(1)}k` : item.forksCount}</Text>
                     <Text style={{ textAlign: 'center', paddingTop: 5 }}>Forks</Text>
                 </View>
                 <View style={{ flexGrow: 1}}>
-                    <Text fontWeight='bold' style={{ textAlign: 'center'}}>{item.reviewCount > 1000 ? `${(item.reviewCount / 1000).toFixed(1)}k` : item.reviewCount}</Text>
+                    <Text testID='reviewCount' fontWeight='bold' style={{ textAlign: 'center'}}>{item.reviewCount > 1000 ? `${(item.reviewCount / 1000).toFixed(1)}k` : item.reviewCount}</Text>
                     <Text style={{ textAlign: 'center', paddingTop: 5 }}>Reviews</Text>
                 </View>
                 <View style={{ flexGrow: 1}}>
-                    <Text fontWeight='bold' style={{ textAlign: 'center'}}>{item.ratingAverage > 1000 ? `${(item.ratingAverage / 1000).toFixed(1)}k` : item.ratingAverage}</Text>
+                    <Text testID='ratingAvg' fontWeight='bold' style={{ textAlign: 'center'}}>{item.ratingAverage > 1000 ? `${(item.ratingAverage / 1000).toFixed(1)}k` : item.ratingAverage}</Text>
                     <Text style={{ textAlign: 'center', paddingTop: 5 }}>Ratings</Text>
                 </View>
             </View>
